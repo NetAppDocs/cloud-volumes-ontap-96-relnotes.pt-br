@@ -1,0 +1,174 @@
+---
+sidebar: sidebar 
+permalink: reference-configs-azure.html 
+keywords: vm, explore, standard, premium, byol, capacity, maximum, virtual machine, Cloud Volumes ONTAP, supported, configurations, disks, sizes 
+summary: O Cloud Volumes ONTAP está disponível no Azure nas configurações PAYGO e BYOL. Para PAYGO, você pode escolher entre explorar, Standard ou Premium. 
+---
+= Configurações compatíveis no Azure
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+O Cloud Volumes ONTAP está disponível no Azure em duas opções de preços: Pagamento conforme o uso e traga sua própria licença (BYOL). Para pagamento conforme o uso, você pode escolher entre três configurações: Explore, Standard ou Premium.
+
+
+
+== Configurações suportadas por licença
+
+O Cloud Volumes ONTAP está disponível no Azure como um sistema de nó único e como um par de nós de alta disponibilidade (HA) para tolerância de falhas e operações ininterruptas.
+
+A atualização de um único sistema de nós para um par de HA não é compatível. Se você quiser alternar entre um único sistema de nós e um par de HA, precisará implantar um novo sistema e replicar dados do sistema existente para o novo sistema.
+
+
+
+=== Sistemas de nó único
+
+Você pode escolher entre as seguintes configurações ao implantar o Cloud Volumes ONTAP como um sistema de nó único no Azure:
+
+[cols="h,d,d,d,d"]
+|===
+|  | Explore | Padrão | Premium | BYOL 
+
+
+| Tipos de máquinas virtuais compatíveis | DS3_v2  a| 
+* DS4_v2
+* DS13_v2
+
+ a| 
+* DS5_v2
+* DS14_v2
+* DS15_v2
+
+ a| 
+* DS3_v2
+* DS4_v2
+* DS5_v2
+* DS13_v2
+* DS14_v2
+* DS15_v2
+
+
+
+
+| Tipos de disco suportados 1 4+| Discos gerenciados HDD padrão, discos gerenciados SSD padrão e discos gerenciados SSD Premium 
+
+
+| Disposição de dados inativos em categorias no storage de Blob | Não suportado 3+| Suportado 
+
+
+| Capacidade máxima do sistema (discos e armazenamento de objetos) | 2 TIB | 10 TIB | 368 TIB | 368 TIB por licença 
+|===
+Notas:
+
+. O desempenho de gravação aprimorado é habilitado ao usar SSDs, mas não ao usar o tipo de máquina virtual DS3_v2.
+. Para obter suporte à região do Azure, https://cloud.netapp.com/cloud-volumes-global-regions["Regiões globais do Cloud volumes"^] consulte .
+
+
+
+
+=== Pares HA
+
+Você pode escolher entre as seguintes configurações ao implantar o Cloud Volumes ONTAP como um par de HA no Azure:
+
+[cols="h,d,d,d,d"]
+|===
+|  | Explore | Padrão | Premium | BYOL 
+
+
+| Tipos de máquinas virtuais compatíveis | Não suportado  a| 
+* DS4_v2
+* DS13_v2
+
+ a| 
+* DS5_v2
+* DS14_v2
+* DS15_v2
+
+ a| 
+* DS4_v2
+* DS5_v2
+* DS13_v2
+* DS14_v2
+* DS15_v2
+
+
+
+
+| Tipos de disco suportados | Não suportado 3+| Blobs de página premium 
+
+
+| Disposição em camadas de dados inativos para armazenamento de Blob 2 | Não suportado 3+| Suportado 
+
+
+| Capacidade máxima do sistema (discos e armazenamento de objetos) | Não suportado | 10 TIB | 368 TIB | 368 TIB por licença 
+|===
+Notas:
+
+. Para obter suporte à região do Azure, https://cloud.netapp.com/cloud-volumes-global-regions["Regiões globais do Cloud volumes"^] consulte .
+
+
+
+
+== Tamanhos de disco suportados
+
+No Azure, um agregado pode conter até 12 discos com o mesmo tipo e tamanho.
+
+
+
+=== Sistemas de nó único
+
+Sistemas de nó único usam discos gerenciados do Azure. Os seguintes tamanhos de disco são suportados:
+
+[cols="3*"]
+|===
+| SSD premium | SSD padrão | HDD padrão 
+
+
+ a| 
+* 500 GiB
+* 1 TIB
+* 2 TIB
+* 4 TIB
+* 8 TIB
+* 16 TIB
+* 32 TIB
+
+ a| 
+* 100 GiB
+* 500 GiB
+* 1 TIB
+* 2 TIB
+* 4 TIB
+* 8 TIB
+* 16 TIB
+* 32 TIB
+
+ a| 
+* 100 GiB
+* 500 GiB
+* 1 TIB
+* 2 TIB
+* 4 TIB
+* 8 TIB
+* 16 TIB
+* 32 TIB
+
+
+|===
+
+
+=== Pares HA
+
+Os pares HA usam blobs de página Premium. Os seguintes tamanhos de disco são suportados:
+
+* 500 GiB
+* 1 TIB
+* 2 TIB
+* 4 TIB
+* 8 TIB
+

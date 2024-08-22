@@ -1,0 +1,100 @@
+---
+sidebar: sidebar 
+permalink: reference-configs-gcp.html 
+keywords: google, gcp, google cloud platform, explore, standard, premium, byol, paygo, disks, supported, capacity, machine types, sizes 
+summary: 'O Cloud Volumes ONTAP está disponível no Google Cloud Platform como um sistema de nó único. Duas opções de preços estão disponíveis, pague conforme o uso e traga sua própria licença (BYOL).' 
+---
+= Configurações compatíveis no Google Cloud
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+O Cloud Volumes ONTAP está disponível no Google Cloud Platform como um sistema de nó único. Duas opções de preços estão disponíveis: Pague conforme o uso e traga sua própria licença (BYOL).
+
+
+
+== Visão geral do pagamento conforme o uso
+
+* Oferece Cloud Volumes ONTAP em três opções de licenciamento diferentes: Explore, Standard e Premium.
+* Uma avaliação gratuita de 30 dias está disponível para o primeiro sistema Cloud Volumes ONTAP que você implantar no Google Cloud.
++
+** Não há cobrança de software por hora, mas as taxas de infraestrutura do Google Cloud ainda se aplicam (computação, storage e rede).
+** Quando a avaliação gratuita terminar, você será cobrado por hora de acordo com a licença selecionada, https://console.cloud.google.com/marketplace/details/netapp-cloudmanager/cloud-manager["contanto que você se inscreveu"^]. Se você não se inscreveu, o sistema será encerrado.
+
+
+* Conversões do PAYGO para BYOL não são suportadas atualmente.
+* O suporte técnico básico é oferecido, mas você deve Registrar e ativar o número de série do NetApp associado ao seu sistema.
++
+https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-registering.html["Registre sistemas de pagamento conforme o uso no Cloud Manager"^]
+
+
+
+
+
+== Visão geral da BYOL
+
+* Licença de nó único com opções de assinatura baseadas em termos, como 12 meses, 24 meses e mais.
+* O suporte está incluído durante o período de assinatura.
+* Você pode comprar várias licenças para um sistema BYOL da Cloud Volumes ONTAP para alocar mais de 368 TB de capacidade.
++
+Por exemplo, você pode comprar duas licenças para alocar até 736 TB de capacidade para o Cloud Volumes ONTAP. Ou você pode comprar quatro licenças para obter até 1,4 PIB.
+
+
+
+
+
+== Configurações suportadas por licença
+
+O Cloud Volumes ONTAP está disponível no Google Cloud Platform como um sistema de nó único.
+
+[cols="h,d,d,d,d"]
+|===
+|  | Explore | Padrão | Premium | BYOL 
+
+
+| Tipos de máquinas suportados 1 | custom-4-16384 | n1-padrão-8 | n1-padrão-32  a| 
+* custom-4-16384
+* n1-padrão-8
+* n1-padrão-32
+
+
+
+
+| Tipos de disco suportados 2 4+| Discos persistentes zonais (SSD e padrão) 
+
+
+| Categorização de dados inativos no storage de objetos | Não suportado 3+| Suportado 
+
+
+| Capacidade máxima do sistema (discos e armazenamento de objetos) | 2 TB | 10 TB | 368 TB 3 | 368 TB por licença 3 
+|===
+Notas:
+
+. O tipo de máquina personalizado tem 4 vCPUs e 16 GB de memória. Para obter detalhes sobre os tipos de máquina padrão, https://cloud.google.com/compute/docs/machine-types#standard_machine_types["Documentação do Google Cloud: Tipos de máquina"^] consulte .
+. O desempenho de gravação aprimorado é habilitado ao usar SSDs.
+. Os limites de disco impedem que você alcance o limite de capacidade de 368 TB usando discos sozinhos. Você pode alcançar o limite de capacidade de 368 TB em https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["disposição em camadas dos dados inativos no storage de objetos"^].
++
+link:reference-limits-gcp.html["Saiba mais sobre os limites de disco no Google Cloud"].
+
+. Para obter suporte à região do Google Cloud Platform, https://cloud.netapp.com/cloud-volumes-global-regions["Regiões globais do Cloud volumes"^]consulte .
+
+
+
+
+== Tamanhos de disco suportados
+
+No Google Cloud, um agregado pode conter até 6 discos com o mesmo tipo e tamanho. Os seguintes tamanhos de disco são suportados:
+
+* 100 GB
+* 500 GB
+* 1 TB
+* 2 TB
+* 4 TB
+* 8 TB
+* 16 TB
+
