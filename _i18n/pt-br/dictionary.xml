@@ -481,7 +481,6 @@
   <block id="9f0f02784feedfa2549a9e3a51cfa315" category="list-text">A atualização de um sistema de nó único leva o sistema off-line por até 25 minutos, durante os quais a e/S é interrompida.</block>
   <block id="00795e3f043d0bab791590ffc0257204" category="list-text">A atualização de um par de HA não causa interrupções e e/S é ininterrupta. Durante esse processo de atualização sem interrupções, cada nó é atualizado em conjunto para continuar fornecendo e/S aos clientes.</block>
   <block id="a9f27c00250c46c26cb8db62812585a9" category="sidebar">Essas notas de versão descrevem novos recursos, limitações e problemas conhecidos do Cloud Volumes ONTAP 9,6.</block>
-  <block id="001a55affa5f48701656447cc466491a" category="sidebar">Notas de versão do Cloud Volumes ONTAP 9,6</block>
   <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">Comece agora</block>
   <block id="33871b6190a8d5adbe8b15282054766c" category="sidebar">O que há de novo</block>
   <block id="6beccc67ff905f7da0b29dece26b0485" category="sidebar">Amazon Web Services</block>
@@ -494,7 +493,6 @@
   <block id="dd490b81914dd945601e442a41cb4222" category="sidebar">Comunidade NetApp</block>
   <block id="ff6c37cbc252e306a6b4e390ec13cbc1" category="sidebar">Blog do Cloud Central</block>
   <block id="ad203e818e0c9d7f42f1c260b33875f3" category="sidebar">Webinars na nuvem</block>
-  <block id="da38098873cb3db962a9491ab33ff93d" category="sidebar">Notas de lançamento para casa</block>
   <block id="4847e034bb0a55fcbc8a3380d6a3ab80" category="sidebar">AWS</block>
   <block id="3a580f142203677f1f0bc30898f63f53" category="sidebar">Azure</block>
   <block id="482723983a4f2af954e36ff41e567451" category="sidebar">Limitações conhecidas</block>
@@ -502,4 +500,7 @@
   <block id="5313a9ac102424f63dd4d76f5280130e" category="sidebar">Limitações na AWS</block>
   <block id="1fff298355326f8c77bd77059a41c1a2" category="sidebar">Limitações no Azure</block>
   <block id="9a3a0c4b2afbb088e029484d4b34ba8b" category="sidebar">Limitações no Google Cloud</block>
+  <block id="c3647f40e3574e0e6f49e20c19135bfa" category="section-title">Limitações com o uso de extensões Azure VM</block>
+  <block id="9d167ed7d52d81da8d83590ec3b5a4af" category="paragraph">O Cloud Volumes ONTAP não oferece suporte a extensões de máquina virtual (VM) do Azure e aplicativos de VM em uma implantação. O uso do Cloud Volumes ONTAP no Azure com extensões de VM causa atrasos nas operações e a NetApp recomenda evitá-las.</block>
+  <block id="415a4c0e58754d1017d75ef167c0e10e" category="sidebar">Notas de versão do Cloud Volumes ONTAP 9,6</block>
 </blocks>
