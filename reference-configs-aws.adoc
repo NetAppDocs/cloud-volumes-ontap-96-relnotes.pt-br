@@ -94,7 +94,7 @@ Notas:
 . O desempenho de gravação aprimorado é habilitado ao usar SSDs com padrão Cloud Volumes ONTAP, Premium e BYOL.
 . ssds de GP3 tb não são compatíveis.
 . Para algumas configurações de HA, os limites de disco impedem que você alcance o limite de capacidade TIB de 368 TB usando apenas discos. Nesses casos, você pode alcançar o limite de capacidade de 368 TIB em https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["disposição em camadas dos dados inativos no storage de objetos"^]. Para obter informações sobre limites de disco, link:reference-limits-aws.html["limites de armazenamento"]consulte .
-. Para obter suporte à região da AWS, https://cloud.netapp.com/cloud-volumes-global-regions["Regiões globais do Cloud volumes"^] consulte .
+. Para obter suporte à região da AWS, https://bluexp.netapp.com/cloud-volumes-global-regions["Regiões globais do Cloud volumes"^] consulte .
 
 
 
